@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:appian:types:BWD"
+  xmlns:tns="urn:com:appian:types:BWD" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="%7Burn%3Acom%3Aappian%3Atypes%3ABWD%7DBWD_customer.xsd"/>
+  <xsd:complexType name="BWD_declaration">
+    <xsd:annotation>
+      <xsd:documentation><![CDATA[This CDT will hold the bouwdepot declaration details]]></xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="id" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="requestedOn" nillable="true" type="xsd:dateTime"/>
+      <xsd:element name="declaredAmount" nillable="true" type="xsd:double"/>
+      <xsd:element name="paidAmount" nillable="true" type="xsd:double"/>
+      <xsd:element name="requestStatus" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="contractNumber" nillable="true" type="xsd:int"/>
+      <xsd:element name="customerDetails" nillable="true" type="tns:BWD_customer">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@ManyToOne(cascade=CascadeType.REFRESH)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>BWD_queryDeclarations</name>
+        <uuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4594</uuid>
+        <description>query declarations using a!queryEntity</description>
+        <parentUuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4525</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_queryEntity"(
+  entity: #"_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4593",
+  query: #"SYSTEM_SYSRULES_query"(
+    selection: #"SYSTEM_SYSRULES_querySelection"(
+      columns: {
+        #"SYSTEM_SYSRULES_queryColumn"(
+          field: "paidAmount",
+          visible: false
+        ),
+        #"SYSTEM_SYSRULES_queryColumn"(
+          field: "contractNumber",
+          visible: true
+        ),
+        #"SYSTEM_SYSRULES_queryColumn"(
+          field: "requestedOn",
+          visible: true
+        )
+      }
+    ),
+    filter: #"SYSTEM_SYSRULES_queryFilter"(
+      field: "paidAmount",
+      operator: "&gt;",
+      value: 15000
+    ),
+    pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+      startIndex: 1,
+      batchSize: -1
+    )
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

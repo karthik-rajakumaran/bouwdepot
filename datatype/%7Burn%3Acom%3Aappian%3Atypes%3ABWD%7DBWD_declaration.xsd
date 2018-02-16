@@ -20,7 +20,11 @@
           <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element name="contractNumber" nillable="true" type="xsd:int"/>
+      <xsd:element name="contractNumber" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
       <xsd:element name="customerDetails" nillable="true" type="tns:BWD_customer">
         <xsd:annotation>
           <xsd:appinfo source="appian.jpa">@ManyToOne(cascade=CascadeType.REFRESH)</xsd:appinfo>

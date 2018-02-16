@@ -18,13 +18,13 @@
     </role>
     <role name="VIEWER">
       <users/>
-      <groups/>
+      <groups>
+        <groupUuid>_e-0000dfc1-6107-8000-0670-011e94011e94_22</groupUuid>
+      </groups>
     </role>
     <role name="MANAGER">
       <users/>
-      <groups>
-        <groupUuid>_e-0000dfc1-6107-8000-0670-011e94011e94_25</groupUuid>
-      </groups>
+      <groups/>
     </role>
     <role name="INITIATOR">
       <users/>
@@ -39,12 +39,12 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <pm>
       <meta>
-        <uuid><![CDATA[0002dff1-a8bc-8000-0671-014d98014d98]]></uuid>
+        <uuid><![CDATA[0002e03f-fc3b-8000-0671-014d98014d98]]></uuid>
         <name>
           <string-map>
             <pair>
               <locale country="US" lang="en" variant=""/>
-              <value><![CDATA[BWD Construction Declaratives]]></value>
+              <value><![CDATA[BWD Add Customer]]></value>
             </pair>
           </string-map>
         </name>
@@ -52,7 +52,7 @@
           <string-map>
             <pair>
               <locale country="US" lang="en" variant=""/>
-              <value><![CDATA[Main process to process the bouwdepot declarations]]></value>
+              <value><![CDATA[This process will add the customer details to the database]]></value>
             </pair>
           </string-map>
         </desc>
@@ -61,7 +61,7 @@
           <string-map>
             <pair>
               <locale country="US" lang="en" variant=""/>
-              <value><![CDATA[BWD Construction Declaratives]]></value>
+              <value><![CDATA[BWD Add Customer]]></value>
             </pair>
           </string-map>
         </process-name>
@@ -87,7 +87,7 @@
       </meta>
       <pvs/>
       <nodes>
-        <node uuid="0000dff1-a8bc-8000-0671-014d98014d98">
+        <node uuid="0000e03f-fc3b-8000-0671-014d98014d98">
           <guiId>0</guiId>
           <owner/>
           <icon id="50"/>
@@ -193,7 +193,7 @@
           <on-complete-keep-form-data>false</on-complete-keep-form-data>
           <skipNotification>false</skipNotification>
         </node>
-        <node uuid="0001dff1-a8bc-8000-0671-014d98014d98">
+        <node uuid="0001e03f-fc3b-8000-0671-014d98014d98">
           <guiId>1</guiId>
           <owner/>
           <icon id="51"/>

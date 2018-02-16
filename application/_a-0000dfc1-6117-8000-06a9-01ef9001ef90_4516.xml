@@ -68,6 +68,8 @@
                         <uuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4591</uuid>
                         <uuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4593</uuid>
                         <uuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4594</uuid>
+                        <uuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4598</uuid>
+                        <uuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4605</uuid>
                     </uuids>
                 </item>
                 <item>
@@ -84,6 +86,7 @@
                     <type>processModel</type>
                     <uuids>
                         <uuid>0002dff1-a8bc-8000-0671-014d98014d98</uuid>
+                        <uuid>0002e03f-fc3b-8000-0671-014d98014d98</uuid>
                     </uuids>
                 </item>
                 <item>

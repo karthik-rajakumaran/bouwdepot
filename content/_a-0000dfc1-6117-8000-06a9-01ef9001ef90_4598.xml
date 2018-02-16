@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <rule>
+        <name>BWD_SubmitDeclarationForm</name>
+        <uuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4598</uuid>
+        <description>User input interface for submit form</description>
+        <parentUuid>_a-0000dfc1-6117-8000-06a9-01ef9001ef90_4523</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>=#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Bouwdepot Declaration",
+  instructions: "Lorem Ipsum",
+  contents: {
+    #"SYSTEM_SYSRULES_sectionLayout_v1"(
+      label: "",
+      contents: {
+        #"SYSTEM_SYSRULES_textField"(
+          label: "Contract Number",
+          labelPosition: "ABOVE",
+          value: ri!declaration.contractNumber,
+          saveInto: ri!declaration.contractNumber,
+          refreshAfter: "UNFOCUS",
+          required: true,
+          requiredmessage: "Contract number is mandatory parameter",
+          validations: {}
+        ),
+        #"SYSTEM_SYSRULES_textField"(
+          label: "First Name",
+          labelPosition: "ABOVE",
+          value: ri!declaration.customerDetails.firstName,
+          saveInto: ri!declaration.customerDetails.firstName,
+          refreshAfter: "UNFOCUS",
+          validations: {}
+        ),
+        #"SYSTEM_SYSRULES_textField"(
+          label: "Last Name",
+          labelPosition: "ABOVE",
+          value: ri!declaration.customerDetails.lastName,
+          saveInto: ri!declaration.customerDetails.lastName,
+          refreshAfter: "UNFOCUS",
+          validations: {}
+        ),
+        #"SYSTEM_SYSRULES_floatingPointField"(
+          label: "Declared Amount",
+          labelPosition: "ABOVE",
+          value: ri!declaration.declaredAmount,
+          saveInto: ri!declaration.declaredAmount,
+          refreshAfter: "UNFOCUS",
+          validations: {}
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+        label: "Submit",
+        style: "PRIMARY",
+        saveInto: {}
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+        label: "Cancel",
+        style: "NORMAL",
+        value: true,
+        saveInto: ri!cancel,
+        skipValidation: true
+      )
+    }
+  ),
+  validations: {}
+)</definition>
+        <namedTypedValue>
+            <name>declaration</name>
+            <type>
+                <name>BWD_declaration</name>
+                <namespace>urn:com:appian:types:BWD</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <metadataExpr></metadataExpr>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+</contentHaul>

@@ -14,7 +14,124 @@
             <system>false</system>
             <unlogged>false</unlogged>
         </visibility>
-        <definition></definition>
+        <definition>=#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Customer Entry Form",
+  instructions: "Filll customer details",
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Customer details",
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "First Name",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.firstName,
+                  saveInto: ri!customer.firstName,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Last Name",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.lastName,
+                  saveInto: ri!customer.lastName,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "House Number",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.houseNumber,
+                  saveInto: ri!customer.houseNumber,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Street Name",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.streetName,
+                  saveInto: ri!customer.streetName,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "City",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.city,
+                  saveInto: ri!customer.city,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Postal Code",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.postalCode,
+                  saveInto: ri!customer.postalCode,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Email",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.email,
+                  saveInto: ri!customer.email,
+                  refreshAfter: "UNFOCUS",
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "IBAN",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.IBAN,
+                  saveInto: ri!customer.IBAN,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_integerField"(
+                  label: "Phone Number",
+                  labelPosition: "ABOVE",
+                  value: ri!customer.phoneNumber,
+                  saveInto: ri!customer.phoneNumber,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  validations: {}
+                )
+              }
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+        label: "Submit",
+        style: "PRIMARY",
+        saveInto: {}
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidgetSubmit"(
+        label: "Cancel",
+        style: "NORMAL",
+        value: true,
+        saveInto: ri!cancel,
+        skipValidation: true
+      )
+    }
+  ),
+  validations: {}
+)</definition>
         <namedTypedValue>
             <name>customer</name>
             <type>
@@ -29,6 +146,7 @@
                 <namespace>http://www.w3.org/2001/XMLSchema</namespace>
             </type>
         </namedTypedValue>
+        <metadataExpr></metadataExpr>
         <preferredEditor>interface</preferredEditor>
         <offlineEnabled>false</offlineEnabled>
     </rule>

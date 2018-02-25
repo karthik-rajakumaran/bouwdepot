@@ -15,7 +15,7 @@
             <unlogged>false</unlogged>
         </visibility>
         <urlIdentifier>N0l35Q</urlIdentifier>
-        <published>false</published>
+        <published>true</published>
         <public>false</public>
         <associatedObjects>
             <globalIdMap>
@@ -144,7 +144,14 @@
             </globalIdMap>
         </associatedObjects>
         <applicationNavigation/>
-        <applicationActions/>
+        <applicationActions>
+            <action>
+                <displayLabel>Add Bouwdepot Customer</displayLabel>
+                <description>Add bouwdepot customer to database</description>
+                <processModelUuid>0002e03f-fc3b-8000-0671-014d98014d98</processModelUuid>
+                <actionUuid>4e2a6d1b-d89b-4b7e-9367-28538785f9dc</actionUuid>
+            </action>
+        </applicationActions>
         <associatedApplications>
             <globalIdMap>
                 <item>
